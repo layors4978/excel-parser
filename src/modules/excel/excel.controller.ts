@@ -28,7 +28,8 @@ export class ExcelController {
     res
       .set('Access-Control-Expose-Headers', 'Content-Disposition')
       .status(200)
-      .attachment('result.xlsx')
+      // customize your filetype here (csv or xlsx)
+      .attachment('result.csv')
       .send(buffer);
   }
 }
